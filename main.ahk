@@ -55,6 +55,8 @@ return
 {
   IfWinExist, ahk_class SpotifyMainWindow
     WinActivate
+  Else IfWinExist, - Winamp
+    WinActivate
   return
 }
 
