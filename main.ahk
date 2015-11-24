@@ -22,13 +22,15 @@ IfWinExist, HipChat
 }
 
 #c::
-IfWinExist, ahk_class MozillaWindowClass
+IfWinExist, ahk_class Chrome_WidgetWin_1 
     WinActivate
 return
 
 #b::
 IfWinExist, ahk_class mintty
     WinActivate
+Else
+    Run "C:\Users\JWARTAL\.babun\cygwin\bin\mintty.exe"
 return
 
 #i::
@@ -44,7 +46,7 @@ return
 ;return
 ;}
 
-#a::
+#+a::
 {
   IfWinExist, - Atom
     WinActivate
@@ -61,3 +63,5 @@ return
 }
 
 #v::Send   {Media_Play_Pause}
+AppsKey::RWin
+CapsLock::Ctrl
